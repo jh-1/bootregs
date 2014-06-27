@@ -11,19 +11,19 @@
 ;
 ;Build with
 ;
-;  nasm -f bin bootregs.nasm -l bootregs.lst
+;  nasm -f bin -o bootregs.sys bootregs.nasm
 ;
 ;Write to a floppy with
 ;
-;  (Windows)    dd bs=512 count=1 if=bootregs of=\\.\a:
 ;  (Unix)  sudo dd bs=512 count=1 if=bootregs of=
+;  (Windows)    dd bs=512 count=1 if=bootregs of=\\.\a:
 ;
-;where for Unix you supply the disk device (/dev/something) after
+;where for Unix you supply the floppy disk device (/dev/something) after
 ; the of= argument.
 ;
 
-cpu 8086
 bits 16
+cpu 8086
 org 0x7c00
 
 ;Set the hexadecimal letter case

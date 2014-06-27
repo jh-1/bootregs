@@ -1,4 +1,5 @@
 *
-!.gitignore
 !makefile
+!.gitignore
+!readme*
 !*.nasm
